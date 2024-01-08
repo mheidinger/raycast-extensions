@@ -1,0 +1,51 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "jira-open-issue",
+  "title": "Jira Open Issue",
+  "description": "Open a jira issue by its key from your clipboard",
+  "icon": "icon.png",
+  "author": "mheidinger",
+  "access": "public",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "open-issue",
+      "title": "Open Issue",
+      "subtitle": "Jira",
+      "description": "Open issue by key from clipboard.",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "baseUrl",
+      "type": "textfield",
+      "required": false,
+      "title": "Jira Base URL",
+      "description": "Optional Base URL for Self-Hosted Jira (e.g. https://jira.acme-inc.com). Defaults to the public Jira."
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.64.3"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.8",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "20.10.5",
+    "@types/react": "18.2.45",
+    "eslint": "^8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
